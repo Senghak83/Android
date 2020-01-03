@@ -152,5 +152,41 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/btShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+
+
+        android:background="@drawable/buttondash"
+        android:clickable="true"
+        android:clipToPadding="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:onClick="goShare"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btlogin">
+
+
+        <ImageView
+            android:id="@+id/scr"
+            android:layout_width="54dp"
+            android:layout_height="57dp"
+            android:background="@drawable/bmsg"
+            app:srcCompat="@drawable/ic_share" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share" />
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

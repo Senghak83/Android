@@ -10,7 +10,7 @@ import com.itc.itcandroid.Login.frmlogin;
 import com.itc.itcandroid.Message.frmsms;
 import com.itc.itcandroid.SendObject.frmmail;
 import com.itc.itcandroid.ScrollText.frmScroll;
-
+import com.itc.itcandroid.Share_Menu.frmShare;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,5 +39,9 @@ public class MainActivity extends AppCompatActivity {
     public void ScrollText(View view) {
         startActivity(new Intent(this,frmScroll.class));
 
+    }
+
+    public void goShare(View view) {
+        startActivity(new Intent(this, frmShare.class));
     }
 }
