@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ITCAndroid</string>
+    <string name="regis"><strong><u>Click her to registor</u></strong></string>
+    <string name="title">Android action bar home button</string>
+    <string name="infor">22 មេសា 2013 - @Override public boolean
+        onOptionsItemSelected
+        (MenuItem ... to have when going to a home activity
+        and can stop the back stack getting in a ...
+    1 ឧសភា 2015 - if (id == android.R.id.home)
+        { Fragment currentFragment }2 មេសា 2014 -
+        This article shows how the Android
+        Action Bar can be used to help create elegant ...
+        Download it and copy the necessary icons to the
+        res/drawable-xxxx .... main entrance to
+        your app (the “home” screen) should offer the user a way ...
+        When it is pressed, the activity receives a
+        call to onOptionsItemSelected() .
+    </string>
+</resources>
