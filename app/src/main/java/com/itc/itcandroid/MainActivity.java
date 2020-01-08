@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.itc.itcandroid.Infor.frmInfor;
 import com.itc.itcandroid.Login.frmlogin;
 import com.itc.itcandroid.Message.frmsms;
 import com.itc.itcandroid.SendObject.frmmail;
@@ -43,5 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void goShare(View view) {
         startActivity(new Intent(this, frmShare.class));
+    }
+
+    public void goInfor(View view) {
+        startActivity(new Intent(this, frmInfor.class));
+
     }
 }

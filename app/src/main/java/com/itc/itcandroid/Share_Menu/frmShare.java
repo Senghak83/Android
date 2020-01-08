@@ -2,9 +2,11 @@ package com.itc.itcandroid.Share_Menu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ShareCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -30,14 +32,24 @@ public class frmShare extends BaseActivi {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.sh_b:
-                Intent sha = new Intent(Intent.ACTION_SENDTO);
+                //Intent sha = new Intent(Intent.ACTION_SEND_MULTIPLE);
+                String mimeType = "text/plain";
+//                sha.setType("text/plian");
+//                String st1 = "Title";
+//                String st2 = "Body";
+//                sha.putExtra(Intent.EXTRA_TEXT,st1);
+//                sha.putExtra(Intent.EXTRA_SUBJECT,st2);
+//                startActivity(Intent.createChooser(sha,"Share"));
 
-                sha.setType("text/plian");
-                String st1 = "Title";
-                String st2 = "Body";
-                sha.putExtra(Intent.EXTRA_TEXT,st1);
-                sha.putExtra(Intent.EXTRA_SUBJECT,st2);
-                startActivity(Intent.createChooser(sha,"Share"));
+                ShareCompat.IntentBuilder builder = ShareCompat.IntentBuilder.from(this)
+                        .setText("Hi ")
+                        .setType(mimeType)
+                        .setChooserTitle("Share with:");
+                //----------------------Send Direct--------
+                Intent shareIntent = builder.getIntent();
+                //shareIntent.setPackage("org.telegram.messenger");
+
+                startActivity(Intent.createChooser(shareIntent, "Share with:"));
 
                 break;
 
